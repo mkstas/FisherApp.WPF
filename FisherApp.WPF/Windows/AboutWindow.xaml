@@ -5,9 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FisherApp.WPF"
         mc:Ignorable="d"
-        Title="О программе" Height="450" Width="800"
-        WindowStartupLocation="CenterOwner">
+        Title="О программе" Height="360" Width="640"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="16">
-        <Button Width="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="OkButton_Click">Ок</Button>
+        <StackPanel>
+            <TextBlock Text="О программе"
+                FontSize="16"
+                FontWeight="SemiBold"
+                Foreground="#232634"/>
+            <Rectangle Height="1"
+                Fill="#ccd0da"
+                Margin="0,8,0,8"/>
+            <StackPanel Orientation="Vertical">
+                <TextBlock FontSize="14" Foreground="#303446">
+                    Существуют 10 рыбаков. У каждого садок, в котором от 0 до 9.
+                </TextBlock>
+                <TextBlock FontSize="14" Foreground="#303446">
+                    Случайным образом выбирается рыбак, которому добавляется 1 рыба.
+                </TextBlock>
+                <TextBlock FontSize="14" Foreground="#303446">
+                    Аварийная лампа убирает 1 рыбу у рыбака, у которого от 1 до 9 рыб.
+                </TextBlock>
+                <TextBlock FontSize="14" Foreground="#303446">
+                    Программа завершается когда у каждого рыбака по 10 рыб.
+                </TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <Button Content="Ок"
+            Width="80"
+            Height="24"
+            FontSize="12"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Click="OkButton_Click"/>
     </Grid>
 </Window>

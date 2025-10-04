@@ -5,9 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FisherApp.WPF"
         mc:Ignorable="d"
-        Title="Об авторе" Height="450" Width="800"
-        WindowStartupLocation="CenterOwner">
+        Title="Об авторе" Height="360" Width="640"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
     <Grid Margin="16">
-        <Button Width="80" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="OkButton_Click">Ок</Button>
+        <StackPanel>
+            <TextBlock Text="Об авторе"
+                FontSize="16"
+                FontWeight="SemiBold"
+                Foreground="#232634"/>
+            <Rectangle Height="1"
+                Fill="#ccd0da"
+                Margin="0,8,0,8"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Разработал:"
+                    Width="90"
+                    FontSize="14"
+                    Foreground="#303446"/>
+                <TextBlock Text="Макаров С.А."
+                    FontSize="14"
+                    FontWeight="SemiBold"
+                    Foreground="#232634"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Группа:"
+                    Width="90"
+                    FontSize="14"
+                    Foreground="#303446"/>
+                <TextBlock Text="ИВТб-2301-05-00"
+                    FontSize="14"
+                    FontWeight="SemiBold"
+                    Foreground="#232634"/>
+            </StackPanel>
+        </StackPanel>
+        <Button Content="Ок"
+            Width="80"
+            Height="24"
+            FontSize="12"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Click="OkButton_Click"/>
     </Grid>
 </Window>

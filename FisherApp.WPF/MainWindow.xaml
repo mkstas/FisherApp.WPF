@@ -6,19 +6,20 @@
         xmlns:local="clr-namespace:FisherApp.WPF"
         mc:Ignorable="d"
         Title="Рыбаки" Height="450" Width="800"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <Menu VerticalAlignment="Top">
-            <MenuItem Header="Файл">
+        <Menu VerticalAlignment="Top" Height="20">
+            <MenuItem Header="Файл" Height="20">
                 <MenuItem Header="Открыть" />
                 <MenuItem Header="Сохранить" />
                 <MenuItem Header="Выход" />
             </MenuItem>
-            <MenuItem Header="Настройки">
+            <MenuItem Header="Настройки" Height="20">
                 <MenuItem Header="Выбор цвета" />
                 <MenuItem Header="Начальное заполнение" />
             </MenuItem>
-            <MenuItem Header="Справка">
+            <MenuItem Header="Справка" Height="20">
                 <MenuItem Header="О программе" Click="OpenAboutWindow_Click" />
                 <MenuItem Header="Об авторе" Click="OpenAuthorWindow_Click" />
             </MenuItem>

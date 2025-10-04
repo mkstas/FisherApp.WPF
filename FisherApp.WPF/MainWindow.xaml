@@ -13,7 +13,7 @@
             <MenuItem Header="Файл" Height="20">
                 <MenuItem Header="Открыть" />
                 <MenuItem Header="Сохранить" />
-                <MenuItem Header="Выход" />
+                <MenuItem Header="Выход" Click="ExitMenuItem_Click" />
             </MenuItem>
             <MenuItem Header="Настройки" Height="20">
                 <MenuItem Header="Выбор цвета" />

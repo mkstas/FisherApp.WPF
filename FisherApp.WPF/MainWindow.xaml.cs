@@ -32,5 +32,10 @@ namespace FisherApp.WPF
             AuthorWindow authorWindow = new();
             authorWindow.ShowDialog();
         }
+
+        private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

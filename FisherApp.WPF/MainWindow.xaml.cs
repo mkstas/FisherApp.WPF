@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using FisherApp.WPF.Windows;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +17,24 @@ namespace FisherApp.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public bool isStart = false;
+        public bool isPause = false;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OpenColorsWindow_Click(object sender, RoutedEventArgs e)
+        {
+            ColorsWindow colorsWindow = new();
+            colorsWindow.ShowDialog();
+        }
+
+        private void OpenInitialWindow_Click(object sender, RoutedEventArgs e)
+        {
+            InitialWindow initialWindow = new();
+            initialWindow.ShowDialog();
         }
 
         private void OpenAboutWindow_Click(object sender, RoutedEventArgs e)
@@ -33,9 +49,44 @@ namespace FisherApp.WPF
             authorWindow.ShowDialog();
         }
 
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            isStart = !isStart;
+
+            if (isStart)
+            {
+                startBtn.Content = "Старт";
+            }
+
+            if (!isStart)
+            {
+                startBtn.Content = "Стоп";
+            }
+        }
+
+        private void PauseButton_Click(object sender, RoutedEventArgs e)
+        {
+            isPause = !isPause;
+
+            if (isPause)
+            {
+                pauseBtn.Content = "Продолжить";
+            }
+
+            if (!isPause)
+            {
+                pauseBtn.Content = "Пауза";
+            }
+        }
+
         private void ExitMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

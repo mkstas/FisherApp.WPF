@@ -9,6 +9,11 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
         <Menu VerticalAlignment="Top" Height="20">
             <MenuItem Header="Файл" Height="20">
                 <MenuItem Header="Открыть" />
@@ -16,13 +21,19 @@
                 <MenuItem Header="Выход" Click="ExitMenuItem_Click" />
             </MenuItem>
             <MenuItem Header="Настройки" Height="20">
-                <MenuItem Header="Выбор цвета" />
-                <MenuItem Header="Начальное заполнение" />
+                <MenuItem Header="Выбор цвета" Click="OpenColorsWindow_Click" />
+                <MenuItem Header="Начальное заполнение" Click="OpenInitialWindow_Click" />
             </MenuItem>
             <MenuItem Header="Справка" Height="20">
                 <MenuItem Header="О программе" Click="OpenAboutWindow_Click" />
                 <MenuItem Header="Об авторе" Click="OpenAuthorWindow_Click" />
             </MenuItem>
         </Menu>
+        
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Height="24" Margin="8">
+            <Button x:Name="startBtn" Width="90" Margin="0,0,8,0" Height="24" Click="StartButton_Click">Старт</Button>
+            <Button x:Name="pauseBtn" Width="90" Margin="0,0,8,0" Height="24" Click="PauseButton_Click">Пазуа</Button>
+            <Button x:Name="exitBtn" Width="90" Height="24" Click="ExitButton_Click">Выход</Button>
+        </StackPanel>
     </Grid>
 </Window>

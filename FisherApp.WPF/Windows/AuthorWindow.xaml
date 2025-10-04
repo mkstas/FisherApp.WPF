@@ -8,7 +8,7 @@
         Title="Об авторе" Height="360" Width="640"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid Margin="16">
+    <Grid Margin="8">
         <StackPanel>
             <TextBlock Text="Об авторе"
                 FontSize="16"
@@ -39,7 +39,7 @@
             </StackPanel>
         </StackPanel>
         <Button Content="Ок"
-            Width="80"
+            Width="90"
             Height="24"
             FontSize="12"
             HorizontalAlignment="Center"

@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FisherApp.WPF.Models;
+using FisherApp.WPF.Utilites;
+using System.Text.Json;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace FisherApp.WPF.Windows
 {
@@ -19,9 +10,23 @@ namespace FisherApp.WPF.Windows
     /// </summary>
     public partial class ColorsWindow : Window
     {
-        public ColorsWindow()
+        private readonly List<Person> _people;
+        public readonly List<ColorData> _colors;
+
+        public ColorsWindow(List<Person> people)
         {
             InitializeComponent();
+            DataContext = this;
+
+            _people = people;
+            _colors = GetColors();
+        }
+
+        private static List<ColorData> GetColors()
+        {
+            var json = FileReader.ReadJson("Resources/colors.json");
+
+            return JsonSerializer.Deserialize<List<ColorData>>(json)!;
         }
     }
 }

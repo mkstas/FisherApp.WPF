@@ -8,7 +8,5 @@
         Title="Выбор цвета" Height="360" Width="640"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
-    <Grid>
-        
-    </Grid>
 </Window>
+    

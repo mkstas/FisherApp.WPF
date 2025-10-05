@@ -16,8 +16,8 @@
         
         <Menu VerticalAlignment="Top" Height="20">
             <MenuItem Header="Файл" Height="20">
-                <MenuItem Header="Открыть" />
-                <MenuItem Header="Сохранить" />
+                <MenuItem Header="Открыть" Click="OpenMenuFile_Click" />
+                <MenuItem Header="Сохранить" Click="SaveMenuFile_Click" />
                 <MenuItem Header="Выход" Click="ExitMenuItem_Click" />
             </MenuItem>
             <MenuItem Header="Настройки" Height="20">
